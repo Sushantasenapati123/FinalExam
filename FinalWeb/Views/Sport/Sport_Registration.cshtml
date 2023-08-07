@@ -1,0 +1,488 @@
+﻿@model Exam.Domain.Sports.Spot
+
+
+@{
+    ViewData["Title"] = "AddDoctor";
+
+
+
+    var ResultData = ViewBag.Result as List<Exam.Domain.Sports.Spot>;
+}
+<style>
+</style>
+<div class="container position-sticky">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><span><i class="fa fa-home"></i></span></li>
+            <li class="breadcrumb-item active alert-danger">Sports Club Registration Form</li>
+        </ol>
+    </nav>
+</div>
+@*<div class="page-title">
+        <div class="title-details">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-0 mb-0 bg-transparent" id="navigation">
+                </ol>
+            </nav>
+        </div>
+    </div>*@
+<!--<div class="row">
+    <div class="col-md-12 col-sm-12">
+        <div class="card">-->
+@*<div class="indicatorslist">
+        <center><h2>Sport Registration</h2></center>
+    </div>*@
+<!--<div class="card-header">
+    <div class="card-header">-->
+@*<ul class="nav nav-tabs nav-fill" role="tablist">
+        <a class="nav-item nav-link active" asp-controller="Sport" asp-action="Sport_Registration">Add</a>
+        <a class="nav-item nav-link " asp-controller="Sport" asp-action="View_SportRegistration">View</a>
+    </ul>*@
+
+<!--</div>
+
+</div>-->
+@*----------*@
+
+<!--<!-- BASIC FORM ELEMENTS -->
+<!--===================================================-->
+<!--<div class="card-body">
+
+    <div class="row">-->
+@*<div class="col-12 col-md-6 col-xl-6">
+        <label class="control-label">Club Name</label>
+        <select id="Club" class="form-control" onchange="GetAllSubCatByCId()" asp-items="@(new SelectList(ViewBag.UnitName,"club_id","club_name"))">
+        </select>
+
+    </div>*@
+@*<div class="col-12 col-md-6 col-xl-6">
+        <label class="control-label">Sports Name</label>
+        <select id="Sports" class="form-control">
+            <option value="0">Select</option>
+        </select>
+
+    </div>*@
+<!--</div>
+
+<div class="row">-->
+@*<div class="form-group col-md-4">
+        <label class="control-label">AppliCant NAme</label>
+        <input id="NAme" class="form-control" onchange="NamevalidationC('NAme','lblErrorName')" />
+        <span id="lblErrorName" style="color:red"></span>
+    </div>*@
+
+@*<div class="form-group col-md-4">
+        <label class="control-label">Email</label>
+        <input id="Email" type="email" class="form-control" onchange="emailValidate('Email','lblError')" />
+        <span id="lblError" style="color:red"></span>
+    </div>*@
+@*<div class="form-group col-md-4">
+        <label class="control-label">Mobile Number</label>
+        <input id="Mobile" class="form-control" onchange="Phonevalidate('Mobile','lblErrorPhone')" />
+        <span id="lblErrorPhone" style="color:red"></span>
+
+    </div>*@
+
+<!--</div>
+
+<div class="row">-->
+@*<div class="form-group col-md-4">
+        <label class="control-label">Date Of Birth</label>
+        <input id="dob" class="form-control " type="date" />
+
+    </div>*@
+
+@*<div class="form-group col-md-4">
+        <label class="control-label">Gender</label>
+        <select class="form-control" id="Gender">
+            <option value="0">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+
+        </select>
+    </div>*@
+@*<div class="form-group col-md-4">
+        <label class="control-label">Upload Image</label>
+        <input id="Image" class="form-control" type="file" />
+        <img src="" id="img" height="50" width="50" />
+    </div>*@
+
+<!--</div>
+<div class="form-group center">
+    <label class="col-12 col-md-2 col-xl-2 control-label"></label>
+    <div class="col-12 col-md-6 col-xl-4">-->
+@*<button class="btn btn-primary mb-1" id="btnSubmit">Submit</button>
+    <button class="btn btn-danger mb-1" id="btnCancel">Reset</button>*@
+@*</div>
+        </div>
+
+    </div>
+
+    chikun
+    chikun
+    chikun
+    chikun*@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-sm-inline-flex justify-content-between">
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <a class="nav-item nav-link active" asp-controller="Sport" asp-action="Sport_Registration">Add</a>
+                        <a class="nav-item nav-link " asp-controller="Sport" asp-action="View_SportRegistration">View</a>
+                    </ul>
+                    <div class="indicatorslist">
+                        <p class="ml-2 text-danger">(*) Indicates mandatory </p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+
+                        <div class="row mt-2 mb-2">
+                            <div class="form-group col-sm-6">
+                                <label>CLUB NAME<span class="text-danger">*</span></label>
+                                <select id="Club" class="form-control" onchange="GetAllSubCatByCId()" asp-items="@(new SelectList(ViewBag.UnitName,"club_id","club_name"))">
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>SPORTS NAME<span class="text-danger">*</span></label>
+                                <select id="Sports" class="form-control">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <fieldset class="border-2">
+                            <legend>Applicant Details</legend>
+                            <div class="row mt-2 mb-2">
+                                <div class="form-group col-sm-4">
+                                    <label>Applicant Name <span class="text-danger">*</span></label>
+                                    <input id="NAme" class="form-control" onchange="NamevalidationC('NAme','lblErrorName')" />
+                                    <span id="lblErrorName" style="color:red"></span>
+                                </div>
+                                <div class="form-group col-sm-4 ">
+                                    <label>Email <span class="text-danger">*</span></label>
+                                    <input id="Email" type="email" class="form-control" onchange="emailValidate('Email','lblError')" />
+                                    <span id="lblError" style="color:red"></span>
+                                </div>
+                                <div class="form-group col-sm-4 ">
+                                    <label>Mobile No<span class="text-danger">*</span></label>
+                                    <input id="Mobile" class="form-control" onchange="Phonevalidate('Mobile','lblErrorPhone')" />
+                                    <span id="lblErrorPhone" style="color:red"></span>
+                                </div>
+                            </div>
+                            <div class="row mt-2 mb-2">
+                                <div class="form-group col-sm-3 ">
+                                    <label>Date of Birth<span class="text-danger">*</span></label>
+                                    <input id="dob" class="form-control " type="date" />
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label>Gender<span class="text-danger">*</span></label>
+                                    <div class="d-flex col-sm-6 mt-1">
+                                        <div class="form-check col-sm-5">
+                                            <input type="radio" id="type1" class="form-check-input s_type" name="SchoolType" value="Male">
+                                            <label for="type1" class="form-check-label">Male</label>
+                                        </div>
+                                        <div class="form-check col-sm-3 ">
+                                            <input type="radio" id="type2" class="form-check-input s_type" name="SchoolType" value="Female">
+                                            <label for="type2" class="form-check-label">Female</label><br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <label>Upload PHOTO<span class="text-danger">*</span></label>
+                                    <input id="Image" class="form-control" type="file" />
+                                    <img src="" id="img" height="50" width="50" />
+                                </div>
+                            </div>
+
+                            <div class="row mt-2 mb-2">
+                                <div class="col-sm-"></div>
+                                <div class="form-group col-sm-6">
+                                    <button class="btn btn-success mb-1" id="btnSubmit">Submit</button>
+                                    <button class="btn btn-danger mb-1" id="btnCancel">Reset</button>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="form-group col-md-4">
+
+    <input id="PatientID" class="form-control" hidden />
+</div>
+
+
+
+
+
+
+<!--===================================================-->
+<!-- END BASIC FORM ELEMENTS -->
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/validation/validation.js"></script>
+<script>
+    $(document).ready(function () {
+        //breadcumb
+        var id = getUrlVars()["id"];
+        if (id != undefined) {
+            $("#btnSubmit").html("Update");
+            $("#btnCancel").html("Cancel");
+
+            Edit(id);
+        }
+    });
+    function GetAllSubCatByCId() {
+
+        $.ajax({
+            url: "/Sport/GetSubCatByCId?clubid=" + $('#Club').val(),
+            type: "GET",
+            success: function (result) {
+                data = JSON.parse(result);
+                var v = "<option value='0'>--Select--</option>";
+                $.each(data, function (i, item) {
+                    v += "<option value=" + item.sport_Id + ">" + item.sprot_name + "</option>";
+                });
+                $("#Sports").html(v);
+            },
+            error: function (error) {
+                jsonValue = jQuery.parseJSON(error.responseText);
+                bootbox.alert("Error : " + jsonValue);
+            }
+        });
+    }
+
+    function validate() {
+          if ($('#Club').val() == "0") {
+            alert("Please Select Club !");
+            return false;
+            $('#Club').focus();
+        }
+
+        else if ($('#Sports').val() == "0") {
+            alert("Please Select Sports !");
+            return false;
+            $('#Sports').focus();
+        }
+       else if ($('#NAme').val() == "") {
+            alert("Please Enter Name!");
+            $('#NAme').focus();
+            return false;
+        }
+        else if ($('#Email').val() == "") {
+            alert("Please Enter Email!");
+            return false;
+            $('#Email').focus();
+        }
+        else if ($('#Mobile').val() == "") {
+            alert("Please Enter Mobile");
+            $('#Mobile').focus();
+            return false;
+          }
+          else if ($('#dob').val() == "") {
+              alert("Please Select dob !");
+              return false;
+              $('#dob').focus();
+          }
+        else if ($('#Gender').val() == "0") {
+            alert("Please Select Gender!");
+            $('#Gender').focus();
+            return false;
+        }
+          else if ($('#Image').val() == "") {
+              alert("Please Select Image !");
+              return false;
+              $('#Image').focus();
+          }
+        else
+            return true;
+
+
+
+    }
+    function reset() {
+        $('#PatientID').val("");
+        $("#NAme").val("");
+        $("#Email").val("");
+        $("#Mobile").val("");
+
+        $("#dob").val("");
+
+        $("#Gender").val("0");
+        $("#Club").val("0");
+        $("#Sports").val("0");
+    }
+    $("#btnCancel").click(function () { reset()});
+
+    $("#btnSubmit").click(function () {
+
+
+
+        var doc = {
+            Registration_Id: $("#PatientID").val(),
+            Applicant_name: $("#NAme").val(),
+            Email: $("#Email").val(),
+            Mobile_no: $("#Mobile").val(),
+            image_path: $("#Image").val(),
+            //Gender: $("#Gender").val(),
+            Gender: $(".s_type:checked").val(),
+            dob: $("#dob").val(),
+            club_id: $("#Club").val(),
+            sport_Id: $("#Sports").val(),
+
+
+        };
+        if (validate() && emailValidate('Email', 'lblError') == true && Phonevalidate('Mobile', 'lblErrorPhone') == true && NamevalidationC('NAme', 'lblErrorName')) {
+
+
+
+
+
+
+            $.ajax({
+                url: "/Sport/Add",
+                data: doc,
+                type: "POST",
+                success: function (result) {
+                    if (result=="Age must Be Greater Than 13")
+                        alert(result);
+                    else {
+                        Email();
+                        //alert(result);
+                        //window.location.href = "/Sport/View_SportRegistration";
+
+
+                    }
+
+                },
+                //error: function (errormessage) {
+                //    alert(errormessage.responseText);
+                //}
+            });
+
+        }
+
+
+    });
+
+    function Email() {
+
+        $.ajax({
+            type: "post",
+            url: "/Sport/SendSucessEmail",
+            data: {
+                ToEmail: $("#Email").val()
+                , Subject: "Success"
+                , Body: "You have successfully registered. Your Name is:" + $("#NAme").val() + " & Your Email:" + $("#Email").val()
+                , Attachments: ""
+            },
+            datatype: "json",
+            traditional: true,
+            success: function (data) {
+                if (data == 1) {
+
+                    alert('Data Saved successfully.');
+                    window.location.href = "/Sport/View_SportRegistration";
+
+
+                }
+
+                else {
+                    alert("Please change the Network");
+                }
+            }
+
+        });
+        return false;
+    }
+
+    //UPDATE
+    function Edit(id) {
+        $("#btnSubmit").html('Update')
+        $.ajax({
+            url: "/Sport/MedicineGetById?id=" + id,
+            typr: "GET",
+            contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            success: function (result) {
+                $("#PatientID").val(id);
+                $("#NAme").val(result.Applicant_name);
+                $("#Email").val(result.Email);
+                $("#Mobile").val(result.Mobile_no);
+
+                $.ajax({
+                    url: "/Sport/GetSubCatByCId?clubid=" + result.club_id,
+                    type: "GET",
+                    success: function (result1) {
+                        data = JSON.parse(result1);
+                        var v = "<option value='0'>--Select--</option>";
+                        $.each(data, function (i, item) {
+                            v += "<option value=" + item.sport_Id + ">" + item.sprot_name + "</option>";
+                        });
+                        $("#Sports").html(v);
+                        $("#Sports").val(result.sport_Id);
+
+                    },
+                    error: function (error) {
+                        jsonValue = jQuery.parseJSON(error.responseText);
+                        bootbox.alert("Error : " + jsonValue);
+                    }
+                });
+
+               // $("#Gender").val(result.Gender);
+
+                $('input[type="radio"]').each(function () {
+                    if ($(this).val() == result.Gender) {
+                        $(this).attr('checked', 'checked');
+                    }
+                });
+                $("#dob").val(result.dob);
+                $("#Club").val(result.club_id);
+                $("#img").attr("src", "../"+result.image_path);
+
+
+            },
+            //error: function (errormessage) {
+            //    alert(errormessage.responseText);
+            //}
+        });
+        return false;
+    }
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#img').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#Image").change(function () {
+        readURL(this);
+    });
+
+
+
+    //DELETE
+
+</script>

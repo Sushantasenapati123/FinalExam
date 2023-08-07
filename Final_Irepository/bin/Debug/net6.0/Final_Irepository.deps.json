@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Final_Irepository/1.0.0": {
+        "dependencies": {
+          "Final.Model": "1.0.0"
+        },
+        "runtime": {
+          "Final_Irepository.dll": {}
+        }
+      },
+      "Final.Model/1.0.0": {
+        "runtime": {
+          "Final.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Final_Irepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Final.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,235 @@
+﻿@model Exam.Domain.Sports.Spot
+@{
+    ViewData["Title"] = "ViewClient";
+    Layout = null;
+    var ResultData = ViewBag.Result as List<Exam.Domain.Sports.Spot>;
+}
+@*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<link href="~/Datatable/CSS/buttons.dataTables.min.css" rel="stylesheet" />
+<link href="~/Datatable/CSS/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="~/Datatable/JS/dataTables.buttons.js"></script>
+<script src="~/Datatable/JS/jquery.dataTables.min.js"></script>
+<script src="~/Datatable/JS/buttons.print.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<div class="container" id="con">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><span><i class="fa fa-home"></i></span></li>
+            <li class="breadcrumb-item alert-danger">Sports Club  Form</li>
+            <li class="breadcrumb-item active alert-danger" aria-current="page"><b>View Details</b></li>
+        </ol>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-sm-inline-flex justify-content-between" id="con1">
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <a class="nav-item nav-link " asp-controller="Sport" asp-action="Sport_Registration">Add</a>
+                        <a class="nav-item nav-link active " asp-controller="Sport" asp-action="View_SportRegistration">View</a>
+                    </ul>
+
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <form asp-controller="Home" asp-action="GetApplicants" method="post">
+                            <div class="row">
+                                <!--<div class="form-group col-sm-4">
+                                <label>Sports Name<span class="text-danger">*</span></label>
+                                <select-->
+                                @*asp-for="provider_id"*@
+                                <!--onchange="bindconnenctionById();" class="form-control" asp-items=">
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>-->
+
+
+                                <div class="form-group ">
+                                    @*<input type="submit" value="Search" class="btn btn-outline-success" />*@
+                                    @*<button type="submit" class="btn btn-primary" id="BtnSearch">Search</button>*@
+                                    <a href="/Sport/deathreportexcell" title="Export to Excel" id="printIcon" data-toggle="tooltip" data-placement="top" class="btn btn-outline-info float-right mt-2 mb-2" style="border-radius:50%;"><i class="fa-solid fa-file-excel"></i></a>
+
+                                </div>
+
+                                <div>
+
+                                    @*<button onclick="ExportToPDF();" data-toggle="tooltip"
+                                                class="btn btn-outline-info float-right mt-2 mb-2" value="PDF">
+                                            <i class='fas fa-file-pdf' style='font-size:30px;color:red'></i>
+                                        </button>*@
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="row">
+                            <div class="col-sm-12 table-responsive">
+                                <table data-toggle="table" id="tblDoctor" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th width="60px" class="align-top text-center">Sl#</th>
+                                            <th width="150px" class="align-top">
+                                                Name
+                                            </th>
+                                            <th width="150px" class="align-top">
+                                                Email
+                                            </th>
+
+                                            <th width="150px" class="align-top">
+                                                Mobile
+                                            </th>
+                                            <th width="150px" class="align-top">
+                                                Club Name
+                                            </th>
+
+                                            <th width="150px" class="align-top">
+                                                Sports Name
+                                            </th>
+                                            <th width="150px" class="align-top">
+                                                Age
+                                            </th>
+                                            <th width="150px" class="align-top">
+                                                Image
+                                            </th>
+
+
+
+
+                                            <th width="150px" class="align-top">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{
+                                            int count = 1;
+                                        }
+                                        @foreach (var list in ResultData)
+                                        {
+                                            <tr>
+                                                <td class="text-center">@count</td>
+
+                                                @if (@list.Age >= 30)
+                                                {
+                                                    <td>
+                                                        @list.Applicant_name
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <b class="text-danger"> @list.Applicant_name</b>
+                                                    </td>
+                                                }
+
+
+                                                <td>
+                                                    @list.Email
+                                                </td>
+
+
+                                                <td>
+                                                    @list.Mobile_no
+                                                </td>
+                                                <td>
+                                                    @list.club_name
+                                                </td>
+
+                                                <td>
+                                                    @list.sprot_name
+                                                </td>
+                                                @if (@list.Age >= 30)
+                                                {
+                                                    <td>
+                                                        @list.Age
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <b class="text-danger"> @list.Age</b>
+                                                    </td>
+                                                }
+
+
+                                                <td>
+                                                    <a href="/@list.image_path" download>@list.image_path</a>
+                                                </td>
+
+                                                <td>
+                                                    @*<a href="/RegistrationUser/User_Registration?id=@Convert.ToString(@list.UserId)" class="text-primary mr-3" title="" data-original-title="Edit"><i class="icon-edit1"></i></a>*@
+                                                    @*<a onclick="updateDepartment('@list.Registration_Id', '@list.club_id');" class="text-primary mr-3" title="" data-original-title="Edit"><i class="icon-edit1"></i></a>*@
+                                                    <button onclick="Edit('@list.Registration_Id');"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                    @*<a href="/Client/AddClient?ClintID=@Convert.ToString(list.Registration_Id)" class="text-primary mr-3" title="" data-original-title="Edit"><i class="icon-edit1"></i></a>*@
+                                                </td>
+                                            </tr>
+                                            count++;
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="BtnSearch" onclick="printDiv();"><i class='fas fa-file-pdf' style='font-size:30px;color:red'></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        getDataTable();
+    })
+    function Edit(Registration_Id) {
+        if (confirm("Are you sure you want to update ?")) {
+            location.href = "/Sport/Sport_Registration?id=" + Registration_Id;
+        }
+    }
+    function getDataTable() {
+        $('#tblDoctor').DataTable({
+            "searching": true,
+            //"bStateSave": true,
+            "dom": 'Bfrtip',
+            "autoWidth": false,
+            "buttons": [
+                ,
+                {
+                    extend: 'pageLength'
+                }
+            ],
+            "lengthMenu": [
+                [10, 25, 50, 100, 1000 - 1],
+                ['10 rows', '25 rows', '50 rows', '100 rows', '1000 rows', 'Show all']
+            ]
+        });
+    }
+
+    function printDiv() {
+        //Get the print button and put it into a variable
+        var printButton = document.getElementById("BtnSearch");
+        var printButton1 = document.getElementById("con");
+        var printButton2 = document.getElementById("con1");//printIcon
+        var printButton3 = document.getElementById("printIcon");//printIcon
+        //Set the print button visibility to 'hidden'
+        printButton.style.visibility = 'hidden';
+        printButton1.style.visibility = 'hidden';
+        printButton2.style.visibility = 'hidden';
+        printButton3.style.visibility = 'hidden';
+
+        //Print the page content
+        window.print();
+        //var divContents = document.getElementById("divToPrint").innerHTML;
+        //var a = window.open('', '', 'height=500, width=500');
+        //a.document.write('<html>');
+        //a.document.write('<head><link href="~/css/printprescription.css" rel="stylesheet" /><link href="~/css/bootstrap.min.css" rel="stylesheet"></head>');
+        //a.document.write('<body>');
+        //a.document.write(divContents);
+        //a.document.write('</body></html>');
+        //a.document.close();
+        //a.print();
+        return false;
+    }
+
+</script>
+
+
