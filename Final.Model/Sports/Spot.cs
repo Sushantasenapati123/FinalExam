@@ -24,10 +24,10 @@ namespace Exam.Domain.Sports
 		public int club_id { get; set; } = 0;//
 		public int sport_Id { get; set; } = 0;//
 		[NotMapped]
-		public string sprot_name { get; set; } = null;
+		public string? sprot_name { get; set; } = "";
 
 		[NotMapped]
-		public string club_name { get; set; } = null;
+		public string? club_name { get; set; } = "";
 		
 		
 

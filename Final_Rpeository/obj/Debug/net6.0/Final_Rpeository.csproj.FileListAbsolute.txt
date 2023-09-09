@@ -32,3 +32,37 @@ C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final_Rpeositor
 C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\refint\Final_Rpeository.dll
 C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.pdb
 C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\ref\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Rpeository.deps.json
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Rpeository.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Irepository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final.Model.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Irepository.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.csproj.AssemblyReference.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.AssemblyInfoInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.AssemblyInfo.cs
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.csproj.CoreCompileInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.csproj.CopyComplete
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\refint\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final_Rpeository\obj\Debug\net6.0\ref\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Rpeository.deps.json
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Rpeository.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Irepository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final.Model.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\bin\Debug\net6.0\Final_Irepository.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.csproj.AssemblyReference.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.AssemblyInfoInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.AssemblyInfo.cs
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.csproj.CoreCompileInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.csproj.CopyComplete
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\refint\Final_Rpeository.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\Final_Rpeository.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final_Rpeository\obj\Debug\net6.0\ref\Final_Rpeository.dll

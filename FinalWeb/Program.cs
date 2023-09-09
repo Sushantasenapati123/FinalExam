@@ -1,14 +1,14 @@
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using Exam.Irepository.ISport;
 using Exam.Repository.PatientRepo;
-using Exam.Web.DiContaner;
+//using Exam.Web.DiContaner;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<SpotInterface, PatientRepositary>();
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddCustomContainer(builder.Configuration);
+//builder.Services.AddCustomContainer(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,5 +25,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
      //pattern: "{controller=Home}/{action=Index}/{id?}");
-     pattern: "{controller=Sport}/{action=Sport_Registration}/{id?}");
+     pattern: "{controller=Final}/{action=EntryForm}/{id?}");
 app.Run();

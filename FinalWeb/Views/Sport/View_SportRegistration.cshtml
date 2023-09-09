@@ -1,7 +1,7 @@
 ﻿@model Exam.Domain.Sports.Spot
 @{
     ViewData["Title"] = "ViewClient";
-    Layout = null;
+
     var ResultData = ViewBag.Result as List<Exam.Domain.Sports.Spot>;
 }
 @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
@@ -159,7 +159,7 @@
                                                 <td>
                                                     @*<a href="/RegistrationUser/User_Registration?id=@Convert.ToString(@list.UserId)" class="text-primary mr-3" title="" data-original-title="Edit"><i class="icon-edit1"></i></a>*@
                                                     @*<a onclick="updateDepartment('@list.Registration_Id', '@list.club_id');" class="text-primary mr-3" title="" data-original-title="Edit"><i class="icon-edit1"></i></a>*@
-                                                    <button onclick="Edit('@list.Registration_Id');"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                    <button onclick="Editt('@list.Registration_Id');">Edit</button>
                                                     @*<a href="/Client/AddClient?ClintID=@Convert.ToString(list.Registration_Id)" class="text-primary mr-3" title="" data-original-title="Edit"><i class="icon-edit1"></i></a>*@
                                                 </td>
                                             </tr>
@@ -177,14 +177,17 @@
     </div>
 </div>
 <script>
-    $(document).ready(function () {
-        getDataTable();
-    })
-    function Edit(Registration_Id) {
+    function Editt(Registration_Id) {
         if (confirm("Are you sure you want to update ?")) {
             location.href = "/Sport/Sport_Registration?id=" + Registration_Id;
         }
     }
+</script>
+<script>
+    $(document).ready(function () {
+        getDataTable();
+    })
+  
     function getDataTable() {
         $('#tblDoctor').DataTable({
             "searching": true,

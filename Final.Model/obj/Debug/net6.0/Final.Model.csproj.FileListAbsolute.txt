@@ -22,3 +22,27 @@ C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final.Model\obj
 C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\refint\Final.Model.dll
 C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.pdb
 C:\Users\sushanta.senapati\Desktop\Text File\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\ref\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\bin\Debug\net6.0\Final.Model.deps.json
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\bin\Debug\net6.0\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\bin\Debug\net6.0\Final.Model.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.csproj.AssemblyReference.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.AssemblyInfoInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.AssemblyInfo.cs
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.csproj.CoreCompileInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\refint\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam\FinalExam\Final.Model\obj\Debug\net6.0\ref\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\bin\Debug\net6.0\Final.Model.deps.json
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\bin\Debug\net6.0\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\bin\Debug\net6.0\Final.Model.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.csproj.AssemblyReference.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.AssemblyInfoInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.AssemblyInfo.cs
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.csproj.CoreCompileInputs.cache
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\refint\Final.Model.dll
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\Final.Model.pdb
+C:\Users\sushanta.senapati\Desktop\CSM All Exam\FinalExam - Copy\FinalExam\Final.Model\obj\Debug\net6.0\ref\Final.Model.dll

@@ -1,0 +1,291 @@
+﻿@{
+    ViewData["Title"] = "Employee Mark Entry Technology Wise";
+}
+<br />
+<fieldset>
+    <legend class="font-weight-bold" style="font-size:larger">Mark Entry Form :</legend>
+    <div class="row">
+        <div class="col-md-3 form-group">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="Name" class="font-weight-bold" style="font-size:large;">Select Batch</label><span style="color:red;">*</span>
+        </div>
+        <div class="col-md-3 form-group">
+            <select asp="Batch_id" id="Batch_id" asp-items="@(new SelectList( ViewBag.Batch,"Batch_id","Batch_Name"))" class="form-control font-weight-bold">
+            </select>
+        </div>
+        <div class="col-md-3 form-group">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 form-group">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="Doctor" class="font-weight-bold" style="font-size:large;">Select Technology</label><span style="color:red;">*</span>
+        </div>
+        <div class="col-md-3 form-group">
+            <select asp="Technology_id" id="Technology_id" asp-items="@(new SelectList( ViewBag.Technology,"Technology_id","Teeechnology_Name"))" class="form-control font-weight-bold">
+            </select>
+        </div>
+        <div class="col-md-3 form-group">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 form-group">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="Doctor" class="font-weight-bold" style="font-size:large;">Select Employee</label><span style="color:red;">*</span>
+        </div>
+        <div class="col-md-3 form-group">
+            <select asp="Employee_id" id="Employee_id" class="form-control font-weight-bold">
+            </select>
+        </div>
+        <div class="col-md-3 form-group">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 form-group">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="Doctor" class="font-weight-bold" style="font-size:large;">Enter Mark</label><span style="color:red;">*</span>
+        </div>
+        <div class="col-md-3 form-group">
+            <input type="text" id="mark" class="form-control" />
+        </div>
+        <div class="col-md-3 form-group">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center mt-3 form-group">
+            <input type="button" id="btnSave" value="Save" style="width: 150px;" class="btn btn-primary" />
+        </div>
+    </div>
+</fieldset>
+<br />
+<fieldset>
+    <legend class="font-weight-bold" style="font-size:larger">View Mark Details Batch Wise:</legend>
+    <br />
+    <div class="row">
+        <div class="col-md-3 form-group">
+        </div>
+        <div class="col-md-3 form-group">
+            <label for="Name" class="font-weight-bold" style="font-size:large;">Select Batch</label><span style="color:red;">*</span>
+        </div>
+        <div class="col-md-3 form-group">
+            <select asp="Batch_id" id="Batch_idRepot" asp-items="@(new SelectList( ViewBag.Batch,"Batch_id","Batch_Name"))" class="form-control font-weight-bold" onchange="ViewRepost()">
+            </select>
+        </div>
+        <div class="col-md-3 form-group">
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="table" id="table_mark">
+            <thead>
+                <tr>
+                    <th>
+                        Slno#
+                    </th>
+                    <th>
+                        Batch Name
+                    </th>
+                    <th>
+                        Batch Start Date
+                    </th>
+                    <th>
+                        Technology Name
+                    </th>
+                    <th>
+                        Employee Name
+                    </th>
+                  
+                    <th>
+                        Mark
+                    </th>
+                    <th>
+                        Grade
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</fieldset>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    function ViewRepost() {
+        var Model = {
+            Batch_id: $("#Batch_idRepot").val()
+           
+        };
+
+        $("#table_mark tbody tr").remove();
+        $.getJSON("/Final/ViewReport", Model, function (data) {
+            data = JSON.parse(data);
+            if (data != null) {
+                var x = 1;
+                data.forEach(function (item) {
+                    $("#table_mark tbody").append(
+                        `<tr><td>` + x + `</td><td>` + item.Batch_Name + `</td><td>` + item.Batch_Start_Date + `</td><td>` + item.Teeechnology_Name + `</td><td>` + item.Employee_Name + `</td><td>` + item.mark + `</td><td>` + item.Grade + `</td><td>` + item.Status + `</td></tr>`
+                    );
+                    x = x + 1;
+                });
+            }
+
+        });
+    }
+    function Validation() {
+        if ($("#Batch_id").val() == "0") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Select Batch',
+                didClose: () => {
+                    $("#Batch_id").focus();
+                }
+            });
+            return false;
+        }
+        else if ($("#Technology_id").val() == "0") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Select Technology',
+                didClose: () => {
+                    $("#Technology_id").focus();
+                }
+            });
+            return false;
+        }
+        else if ($("#Employee_id").val() == "0") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Select Employee',
+                didClose: () => {
+                    $("#Employee_id").focus();
+                }
+            });
+            return false;
+        }
+        else if ($("#mark").val() == "") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Enter Mark',
+                didClose: () => {
+                    $("#mark").focus();
+                }
+            });
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    $(document).ready(function () {
+        $("#Technology_id").change(function () {
+            var Technology_id = $("#Technology_id").val();
+            var Batch_id = $("#Batch_id").val();
+            $("#Employee_id").empty();
+            $.ajax({
+                url: "/Final/Employee_Bind?Batch_id=" + Batch_id + "&Technology_id=" + Technology_id,
+                type: "GET",
+                success: function (result) {
+                    data = JSON.parse(result);
+                    var v = "<option value='0'>--Select--</option>";
+                    $.each(data, function (i, item) {
+                        v += "<option value=" + item.Value + ">" + item.Text + "</option>";
+                    });
+                    $("#Employee_id").html(v);
+                },
+                error: function (error) {
+                    jsonValue = jQuery.parseJSON(error.responseText);
+                    bootbox.alert("Error : " + jsonValue);
+                }
+            });
+          
+        });
+    });
+
+   
+
+    $("#btnSave").click(function () {
+        if (Validation()) {
+            debugger
+            var markval = {
+                empid: $("#Employee_id").val(),
+                mark: $("#mark").val()
+            };
+            $.ajax({
+                url: "/Final/SaveMark",
+                data: markval,
+                type: "POST",
+                success: function (result) {
+                    if (data == 5) {
+                        Swal.fire({
+                            icon: 'Success',
+                            title: 'Success',
+                            text: 'Mark Insert Successfully',
+                            didClose: () => {
+                                location.reload();
+                            }
+                        });
+                    }
+                    else if (data = 4) {
+                        Swal.fire({
+                            icon: 'Success',
+                            title: 'Success',
+                            text: 'Mark For This Employee Of Selected Batch Already Inserted',
+                            didClose: () => {
+                                location.reload();
+                            }
+                        });
+                    }
+                    else if (data == 1) {
+                        Swal.fire({
+                            icon: 'Success',
+                            title: 'Success',
+                            text: 'Please Select Employee',
+                            didClose: () => {
+                                $("#Employee_id").focus();
+                            }
+                        });
+                        return false;
+                    }
+                    else if (data == 2) {
+                        Swal.fire({
+                            icon: 'Success',
+                            title: 'Success',
+                            text: 'Please Enter Mark',
+                            didClose: () => {
+                                $("#mark").focus();
+                            }
+                        });
+                        return false;
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'There Some Error in Insert',
+                        });
+                        return false;
+                    }
+               
+
+                },
+               
+            });
+          
+        };
+    });
+</script>
